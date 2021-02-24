@@ -1,0 +1,84 @@
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "DIN 2014 Narrow", serif;
+    background-color: rgba(0,0,0,0.04);
+}
+
+/*                                     Title                                       */
+
+h1 {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+/*                                  InputQuestion                                  */
+
+#inputQuestion {
+
+    width: 30%;
+    padding: 20px 2%;
+
+    background-color: white;
+    border : 1px solid white;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px #dbdbdb;
+
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+#inputQuestionTitle {
+    font-size: 22px;
+}
+
+.labelResponse {
+    white-space: pre;
+}
+
+/*                                     Button                                      */
+
+#enterButton {
+
+    width: 30%;
+
+    margin: 20px 35%;
+    padding: 10px 0px;
+
+    background-color: white;
+    border : 1px solid white;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px #dbdbdb;
+}
+
+/*                                    ResultBox                                    */
+#resultBox {
+    width: 30%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    background-color: white;
+    border : 1px solid white;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px #dbdbdb;
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+#resultComment {
+    font-size: 24px;
+}
+
+#resultNote {
+    font-size: 32px;
+}

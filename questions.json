@@ -1,0 +1,135 @@
+{
+  "numberOfQuestions":5,
+  "questions":[
+    {
+      "questionId":"question1",
+      "questionTitle":"window.prompt() sert à : ",
+      "questionResponses":[
+        {
+          "responseId":"q1_rep1",
+          "responseContent":"faire défiler une fenêtre",
+          "goodResponse":false
+        },
+        {
+          "responseId":"q1_rep2",
+          "responseContent":"afficher une boite de dialogue de saisie",
+          "goodResponse":true
+        },
+        {
+          "responseId":"q1_rep3",
+          "responseContent":"modifier le caractère de prompt de la console",
+          "goodResponse":false
+        },
+        {
+          "responseId":"q1_rep4",
+          "responseContent":"faire défiler un texte en scrolling",
+          "goodResponse":false
+        }
+      ]
+    },
+    {
+      "questionId":"question2",
+      "questionTitle":"La fonction javascript_info() : ",
+      "questionResponses":[
+        {
+          "responseId":"q2_rep1",
+          "responseContent":"permet de connaître l'OS de l'utilisateur",
+          "goodResponse":false
+        },
+        {
+          "responseId":"q2_rep2",
+          "responseContent":"n'existe pas",
+          "goodResponse":true
+        },
+        {
+          "responseId":"q2_rep3",
+          "responseContent":"renvoie la version de JavaScript utilisée",
+          "goodResponse":false
+        },
+        {
+          "responseId":"q2_rep4",
+          "responseContent":"permet de déboguer une variable",
+          "goodResponse":false
+        }
+      ]
+    },
+    {
+      "questionId":"question3",
+      "questionTitle":"Quel est l'utilité de unsigned ?",
+      "questionResponses":[
+        {
+          "responseId":"q3_rep1",
+          "responseContent":"n'existe pas en JavaScript",
+          "goodResponse":true
+        },
+        {
+          "responseId":"q3_rep2",
+          "responseContent":"déclarer un entier non signé",
+          "goodResponse":false
+        },
+        {
+          "responseId":"q3_rep3",
+          "responseContent":"déclarer un plugin sans certificat",
+          "goodResponse":false
+        },
+        {
+          "responseId":"q3_rep4",
+          "responseContent":"prendre la valeur absolue d'un nombre",
+          "goodResponse":false
+        }
+      ]
+    },
+    {
+      "questionId":"question4",
+      "questionTitle":"Qu'est-ce que JSON par rapport au JavaScript ?",
+      "questionResponses":[
+        {
+          "responseId":"q4_rep1",
+          "responseContent":"un langage de requêtes",
+          "goodResponse":false
+        },
+        {
+          "responseId":"q4_rep2",
+          "responseContent":"un format d'échange de données texte",
+          "goodResponse":true
+        },
+        {
+          "responseId":"q4_rep3",
+          "responseContent":"un langage de programmation dérivé",
+          "goodResponse":false
+        },
+        {
+          "responseId":"q4_rep4",
+          "responseContent":"une variable d'environnement système",
+          "goodResponse":false
+        }
+      ]
+    },
+    {
+      "questionId":"question5",
+      "questionTitle":"Pour tester de nombreuses conditions sur la même variable on utilise : ",
+      "questionResponses":[
+        {
+          "responseId":"q5_rep1",
+          "responseContent":"for()",
+          "goodResponse":false
+        },
+        {
+          "responseId":"q5_rep2",
+          "responseContent":"switch()",
+          "goodResponse":true
+        },
+        {
+          "responseId":"q5_rep3",
+          "responseContent":"if()",
+          "goodResponse":false
+        },
+        {
+          "responseId":"q5_rep4",
+          "responseContent":"while()",
+          "goodResponse":false
+        }
+      ]
+    }
+  ]
+}

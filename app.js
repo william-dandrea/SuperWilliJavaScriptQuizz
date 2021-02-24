@@ -1,9 +1,6 @@
 async function getQuestions() {
     const response = await fetch('./questions.json');
-    const data = await response.json();
-    const { numberOfQuestions, questions } = data;
-
-    return data;
+    return await response.json();
 }
 
 
@@ -44,8 +41,7 @@ function createQuestions(question, numQuestion) {
         htmlLabel.setAttribute("for", question[numQuestion].questionResponses[i].responseId);
         htmlLabel.setAttribute("class", "labelResponse");
 
-        let questionTxt = question[numQuestion].questionResponses[i].responseContent + '\n';
-        htmlLabel.textContent = questionTxt;
+        htmlLabel.textContent = question[numQuestion].questionResponses[i].responseContent + '\n';
 
         htmlInputQuestion.appendChild(htmlLabel);
     }

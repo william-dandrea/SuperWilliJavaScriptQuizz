@@ -18,7 +18,7 @@ h1 {
 
 /*                                  InputQuestion                                  */
 
-#inputQuestion {
+.inputQuestion {
 
     width: 30%;
     padding: 20px 2%;
@@ -34,7 +34,7 @@ h1 {
 
 }
 
-#inputQuestionTitle {
+.inputQuestionTitle {
     font-size: 22px;
 }
 
@@ -81,4 +81,36 @@ h1 {
 
 #resultNote {
     font-size: 32px;
+}
+
+.goodResponse {
+
+    width: 30%;
+    padding: 20px 2%;
+
+    background-color: #b5d989;
+    border : 1px solid #b5d989;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px #dbdbdb;
+
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.badResponse {
+
+    width: 30%;
+    padding: 20px 2%;
+
+    background-color: #de9a9a;
+    border : 1px solid  #de9a9a;
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px #dbdbdb;
+
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+
 }

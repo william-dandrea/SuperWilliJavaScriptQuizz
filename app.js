@@ -1,31 +1,22 @@
+let NUMBER_GOOD_QUESTIONS = 0;
+let NUMBER_BAD_QUESTIONS = 0;
+
 async function getQuestions() {
     const response = await fetch('./questions.json');
     return await response.json();
 }
 
-
-getQuestions().then(r => {
-    const { numberOfQuestions, questions } = r;
-    //console.log(questions[1].questionId);
-    for (let i = 0; i < numberOfQuestions; i++) {
-        createQuestions(questions, i);
-    }
-});
-
-
 function createQuestions(question, numQuestion) {
-
-    console.log("Bienvenue : ");
-    console.log(question[numQuestion].questionId);
 
 
     // Div principale - htmlInputQuestion
     let htmlInputQuestion = document.createElement("div");
-    htmlInputQuestion.setAttribute("id","inputQuestion");
+    htmlInputQuestion.setAttribute("class","inputQuestion");
+    htmlInputQuestion.setAttribute("id",question[numQuestion].questionId);
 
     // Titre de la question
     let htmlInputQuestionTitle = document.createElement("p");
-    htmlInputQuestionTitle.setAttribute("id", "inputQuestionTitle");
+    htmlInputQuestionTitle.setAttribute("class", "inputQuestionTitle");
     htmlInputQuestionTitle.textContent = question[numQuestion].questionTitle;
     htmlInputQuestion.appendChild(htmlInputQuestionTitle);
 
@@ -41,21 +32,82 @@ function createQuestions(question, numQuestion) {
         htmlLabel.setAttribute("for", question[numQuestion].questionResponses[i].responseId);
         htmlLabel.setAttribute("class", "labelResponse");
 
-        htmlLabel.textContent = question[numQuestion].questionResponses[i].responseContent + '\n';
+        htmlLabel.textContent = "    " + question[numQuestion].questionResponses[i].responseContent + '\n';
 
         htmlInputQuestion.appendChild(htmlLabel);
     }
 
 
     document.body.insertBefore(htmlInputQuestion, document.getElementById("enterButton"));
+}
 
-    console.log("Fin : ");
+
+function goodResponse(idElement) {
+    NUMBER_GOOD_QUESTIONS++;
+    let currentElement = document.getElementById(idElement);
+
+    console.log(currentElement);
+
+    currentElement.setAttribute("class", "goodResponse");
+
+
+}
+
+function badQuestion(idElement) {
+    NUMBER_BAD_QUESTIONS++;
+    console.log(idElement);
+
+    let currentElement = document.getElementById(idElement);
+    currentElement.setAttribute("class", "badResponse");
 }
 
 
 
 
-// Création du bloc de checkbox que l'on devra afficher 5 fois
+
+
+getQuestions().then(r => {
+    const { numberOfQuestions, questions } = r;
+    //console.log(questions[1].questionId);
+    for (let i = 0; i < numberOfQuestions; i++) {
+        createQuestions(questions, i);
+    }
+});
+
+
+document.getElementById("enterButton").addEventListener("click", function() {
+
+    // Récupérer les résultats de réponses
+    getQuestions().then(r => {
+        const { numberOfQuestions, questions } = r;
+
+        for (let i = 0; i < questions.length; i++) {
+
+            let questionResponses = questions[i].questionResponses;
+
+
+            for (let j = 0; j < questionResponses.length; j++) {
+                //console.log(questionResponses[j]);
+
+                if (questionResponses[j].goodResponse === true) {
+
+                    if (document.getElementById(questionResponses[j].responseId).checked) {
+                        console.log("Bonne réponse");
+                        goodResponse(questions[i].questionId);
+                    } else {
+                        badQuestion(questions[i].questionId);
+                    }
+
+                }
+            }
+
+        }
+
+    })
+})
+
+
+// Valider les questions.
 
 
 
